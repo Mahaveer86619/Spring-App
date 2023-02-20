@@ -2,6 +2,7 @@ package com.example.springapp;
 
 import androidx.appcompat.app.AppCompatActivity;
 
+import android.content.Intent;
 import android.os.Bundle;
 import android.view.View;
 import android.widget.Button;
@@ -19,7 +20,7 @@ import retrofit2.Call;
 import retrofit2.Callback;
 import retrofit2.Response;
 
-public class MainActivity extends AppCompatActivity {
+public class EmployeeForm extends AppCompatActivity {
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
@@ -55,18 +56,20 @@ public class MainActivity extends AppCompatActivity {
                 employeeApi.save(employee).enqueue(new Callback<Employee>() {
                     @Override
                     public void onResponse(Call<Employee> call, Response<Employee> response) {
-                        Toast.makeText(MainActivity.this, "Saved", Toast.LENGTH_SHORT).show();
+                        Toast.makeText(EmployeeForm.this, "Saved", Toast.LENGTH_SHORT).show();
                     }
 
                     @Override
                     public void onFailure(Call<Employee> call, Throwable t) {
-                        Toast.makeText(MainActivity.this, "Save Failed", Toast.LENGTH_SHORT).show();
-                        Logger.getLogger(MainActivity.class.getName())
+                        Toast.makeText(EmployeeForm.this, "Save Failed", Toast.LENGTH_SHORT).show();
+                        Logger.getLogger(EmployeeForm.class.getName())
                                 .log(Level.SEVERE ,
                                         "____________________HERE____________________" ,
                                         t);
                     }
                 });
+                Intent i = new Intent(EmployeeForm.this, EmplyoeeList.class);
+                startActivity(i);
             }
         });
 
