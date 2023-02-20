@@ -1,0 +1,68 @@
+<?xml version="1.0" encoding="utf-8"?>
+<ScrollView xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:fillViewport="true"
+    android:layout_height="match_parent"
+    tools:context=".MainActivity"
+    android:padding="25dp"
+    android:background="@color/black">
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:orientation="vertical">
+
+        <com.google.android.material.textfield.TextInputEditText
+            android:id="@+id/form_name"
+            android:hint="@string/form_name"
+            android:textColorHint="@color/grey"
+            android:textColor="@color/white"
+            android:gravity="center"
+            android:layout_width="match_parent"
+            android:layout_marginBottom="5dp"
+            android:layout_height="wrap_content"
+            >
+
+        </com.google.android.material.textfield.TextInputEditText>
+        <com.google.android.material.textfield.TextInputEditText
+            android:id="@+id/form_branch"
+            android:hint="@string/form_branch"
+            android:textColorHint="@color/grey"
+            android:textColor="@color/white"
+            android:gravity="center"
+            android:layout_width="match_parent"
+            android:layout_marginBottom="5dp"
+            android:layout_height="wrap_content" >
+
+        </com.google.android.material.textfield.TextInputEditText>
+        <com.google.android.material.textfield.TextInputEditText
+            android:id="@+id/form_location"
+            android:hint="@string/form_location"
+            android:textColorHint="@color/grey"
+            android:textColor="@color/white"
+            android:gravity="center"
+            android:layout_width="match_parent"
+            android:layout_marginBottom="5dp"
+            android:layout_height="wrap_content" >
+
+        </com.google.android.material.textfield.TextInputEditText>
+
+        <Button
+            android:id="@+id/btn_form_save"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:text="@string/form_save_Emp"
+            android:layout_gravity="bottom"
+            android:textAllCaps="false"
+            android:minHeight="60dp"
+            android:background="@drawable/save_employee_shape"
+            app:backgroundTint="@color/green"
+            android:layout_marginTop="400dp">
+
+        </Button>
+
+    </LinearLayout>
+
+</ScrollView>
